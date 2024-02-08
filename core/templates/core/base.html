@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
                 <div class="dropdown">
                     <button class="dropbtn" onmouseenter="myFunction(1)" onmouseleave="myFunction(1)">Hospitales</button>
                     <div class="dropdown-content" id="myDropdown1">
-                        <a href="#" onmouseenter="myFunction(1)" onmouseleave="myFunction(1)">Listado</a>
+                        <a href="{% url 'listadoHospitales' %}" onmouseenter="myFunction(1)" onmouseleave="myFunction(1)">Listado</a>
                         <a href="#" onmouseenter="myFunction(1)" onmouseleave="myFunction(1)">Crear</a>
                     </div>
                 </div>
@@ -34,13 +35,14 @@
                 </div>                              
             </div>
             <div class="navbar-right">
-                {% block contenido%}{% endblock %}
+                
 
             </div>            
         </div>
        
-        <h3>Dropdown Menu inside a Navigation Bar</h3>
-        <p>Click on the "Dropdown" link to see the dropdown menu.</p>
+        <h3>Bienvenido</h3>
+        {% block contenido%}
+        {% endblock %}
         <script src="{% static 'core/js/jsEstilos.js' %}"></script>
     </body>
 </html>

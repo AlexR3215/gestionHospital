@@ -1,0 +1,16 @@
+{% extends 'core/base.html'%}
+
+{% block contenido %}
+
+{% for hosp in object_list %}
+<h2>
+    {{hosp.nombre}}
+</h2>
+
+{% empty %}
+
+<h1>No hay registroo de hospitales</h1>
+
+{% endfor %}
+{% endblock %}
+
